@@ -14,6 +14,8 @@ public class Arrays {
 
         print_array(numbers2);
 
+        int[] numbers3 = { 1, 3, 5, 7, 9 };
+
     }
 
     // print array values
@@ -33,14 +35,31 @@ public class Arrays {
     }
 
     // copy array
-    public static int[] copyArray(int[] array){
+    public static int[] copyArray(int[] array) {
 
         int[] new_array = new int[array.length];
-        
+
         for (int i = 0; i < array.length; i++) {
             new_array[i] = array[i];
         }
 
         return new_array;
+    }
+
+    // check for equality
+    public static boolean isEqual(int[] arr1, int[] arr2) {
+
+        if(arr1.length != arr2.length){
+            return false;
+        }
+
+        for (int i = 0; i < arr1.length; i++) {
+            if(arr1[i] != arr2[i]){
+                return false;
+            }     
+        }
+
+        return true;
+
     }
 }
