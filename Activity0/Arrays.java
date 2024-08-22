@@ -1,6 +1,6 @@
-package Arrays;
+package Activity0;
 
-public class Activity0 {
+public class Arrays {
 
     public static void main(String[] args) {
 
