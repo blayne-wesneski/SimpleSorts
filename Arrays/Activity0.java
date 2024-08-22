@@ -10,6 +10,10 @@ public class Activity0 {
 
         System.out.println(isEmpty(numbers));
 
+        int[] numbers2 = copyArray(numbers);
+
+        print_array(numbers2);
+
     }
 
     // print array values
@@ -26,5 +30,17 @@ public class Activity0 {
     // check if the array is empty
     public static boolean isEmpty(int[] array) {
         return array.length == 0;
+    }
+
+    // copy array
+    public static int[] copyArray(int[] array){
+
+        int[] new_array = new int[array.length];
+        
+        for (int i = 0; i < array.length; i++) {
+            new_array[i] = array[i];
+        }
+
+        return new_array;
     }
 }
