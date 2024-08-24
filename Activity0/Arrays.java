@@ -16,6 +16,8 @@ public class Arrays {
 
         int[] numbers3 = { 1, 3, 5, 7, 9 };
 
+        System.out.println(isEqual(numbers2, numbers3));
+
     }
 
     // print array values
