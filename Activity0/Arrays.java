@@ -6,21 +6,38 @@ public class Arrays {
 
         int[] numbers = { 2, 4, 6, 8, 10 };
 
+        System.out.println("Printed array:");
         printArray(numbers);
+        System.out.println();
 
+        System.out.println("Array is empty:");
         System.out.println(isEmpty(numbers));
+        System.out.println();
+
 
         int[] numbers2 = copyArray(numbers);
 
+        System.out.println("The copied array is:");
         printArray(numbers2);
+        System.out.println();
 
         int[] numbers3 = { 9, 7, 5, 3, 1 };
 
+        System.out.println("Arrays 2 & 3 are equal:");
         System.out.println(isEqual(numbers2, numbers3));
+        System.out.println();
 
-        int[] numbers4 = bubble(numbers3);
+        int[] numbers4 = getRandom(50, 20);
 
+        System.out.println("The random array is:");
         printArray(numbers4);
+        System.out.println();
+
+        int[] numbers5 = bubble(numbers4);
+
+        System.out.println("The sorted random array is:");
+        printArray(numbers5);
+        System.out.println();
 
     }
 
