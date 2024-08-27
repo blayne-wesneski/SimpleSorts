@@ -64,4 +64,17 @@ public class Arrays {
         return true;
 
     }
+
+    // random array
+    public static int[] getRandom(int max, int length){
+        int[] new_list = new int[length];
+
+        for(int i=0; i<new_list.length; i++){
+            new_list[i] = (int) (Math.random() * max);
+        }
+
+        return new_list;
+    }
+
+    
 }
