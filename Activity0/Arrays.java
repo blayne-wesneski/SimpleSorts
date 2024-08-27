@@ -14,7 +14,6 @@ public class Arrays {
         System.out.println(isEmpty(numbers));
         System.out.println();
 
-
         int[] numbers2 = copyArray(numbers);
 
         System.out.println("The copied array is:");
@@ -97,6 +96,7 @@ public class Arrays {
         return new_list;
     }
 
+    // Bubble Sort
     public static int[] bubble(int[] arr) {
         int n = arr.length;
 
@@ -108,6 +108,20 @@ public class Arrays {
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
+            }
+        }
+        return arr;
+    }
+
+    // Selection Sort
+    public static int[] selection(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 0; i < n; i++) {
+            int current = i;
+
+            for (int j = i + 1; j < n; j++) {
+                
             }
         }
         return arr;
