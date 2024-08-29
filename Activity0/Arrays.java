@@ -26,7 +26,7 @@ public class Arrays {
         System.out.println(isEqual(numbers2, numbers3));
         System.out.println();
 
-        int[] numbers4 = getRandom(50, 20);
+        int[] numbers4 = getRandom(50, 100);
 
         System.out.println("The random array is:");
         printArray(numbers4);
@@ -34,14 +34,20 @@ public class Arrays {
 
         int[] numbers5 = bubble(numbers4);
 
-        System.out.println("The sorted random array is:");
+        System.out.println("The sorted random array using bubble sort is:");
         printArray(numbers5);
         System.out.println();
 
         int[] numbers6 = selection(numbers4);
 
-        System.out.println("The sorted random array is:");
+        System.out.println("The sorted random array using selection sort is:");
         printArray(numbers6);
+        System.out.println();
+
+        int[] numbers7 = insertion(numbers4);
+
+        System.out.println("The sorted random array using insertion sort is:");
+        printArray(numbers7);
         System.out.println();
 
     }
@@ -116,7 +122,7 @@ public class Arrays {
             for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     // Swap
-                    swap(i,j,arr);
+                    swap(i, j, arr);
                 }
             }
         }
@@ -135,6 +141,23 @@ public class Arrays {
                 }
             }
             swap(i, current, arr);
+        }
+
+        return arr;
+    }
+
+    // Insertion sort
+    public static int[] insertion(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int current = arr[i];
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > current) {
+                // Shift to the right
+                arr[j + 1] = arr[j];
+                j -= 1;
+            }
+            arr[j + 1] = current;
         }
 
         return arr;
