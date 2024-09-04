@@ -5,9 +5,9 @@ public class simpleSorts {
     public static void main(String[] args){
         int[] randomArr = getRandom(1000, 50);
 
-        int[] randomArr1 = randomArr.clone();
-        int[] randomArr2 = randomArr.clone();
-        int[] randomArr3 = randomArr.clone();
+        int[] randomArr1 = copyArray(randomArr);
+        int[] randomArr2 = copyArray(randomArr);
+        int[] randomArr3 = copyArray(randomArr);
 
         int[] sortedBubble = bubble(randomArr1);
         int[] sortedSelection = selection(randomArr2);
@@ -52,6 +52,18 @@ public class simpleSorts {
         }
 
         return new_list;
+    }
+
+    // copy array
+    public static int[] copyArray(int[] array) {
+
+        int[] new_array = new int[array.length];
+
+        for (int i = 0; i < array.length; i++) {
+            new_array[i] = array[i];
+        }
+
+        return new_array;
     }
 
     // Swap function for sorts
