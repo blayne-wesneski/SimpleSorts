@@ -1,7 +1,5 @@
 package Activity3;
 
-import java.util.List;
-
 public class linkedList implements ListI {
 
     class node {
@@ -21,6 +19,10 @@ public class linkedList implements ListI {
         size = 0;
     }
 
+    /**
+     * Add an element to the front of the list.
+     * O(1)
+     */
     public void addFirst(String obj) {
         // poof a node
         node node = new node(obj);
@@ -35,12 +37,16 @@ public class linkedList implements ListI {
         size++;
     }
 
+    /**
+     * Add an element to the end of the list.
+     * O(n)/theta(n)
+     */
     public void addLast(String obj) {
         node node = new node(obj);
 
         node tmp = head;
 
-        //if list empty
+        // if list empty
         if (size == 0) {
             head = node;
             size++;
@@ -57,8 +63,10 @@ public class linkedList implements ListI {
 
     }
 
-    // print the contents of the list
-    // O(n) linear time
+    /**
+     * print the contents of the list
+     * O(n) linear time
+     */
     public void printList() {
         node tmp = head;
 
@@ -68,7 +76,10 @@ public class linkedList implements ListI {
         }
     }
 
-    // O(1) constant time access to the n elements in the list
+    /**
+     * Return size of the list
+     * O(1) constant time access to the n elements in the list
+     */
     public long size() {
         return size;
     }
