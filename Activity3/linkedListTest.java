@@ -1,6 +1,6 @@
 package Activity3;
 
-public class linkedListDriver {
+public class linkedListTest {
     public static void main(String[] args) {
         linkedList li = new linkedList();
 
