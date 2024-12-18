@@ -1,5 +1,3 @@
-package Activity1;
-
 public class simpleSorts {
     
     public static void main(String[] args){

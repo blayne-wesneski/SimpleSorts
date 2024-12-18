@@ -1,2 +1,2 @@
-# CIT-360
-The repo that contains all work done for my CIT360: Data Structures and Algorithms class
+# Simple Sorts
+This is an implementation of simple sorts from my CIT-360 class. There is also array functions here as well.
